@@ -1,0 +1,11 @@
+<div *ngIf="doc">
+
+        <h2>{{doc.name | uppercase}} Details</h2>
+        <div><span>id: </span>{{doc.id}}</div>
+        <div>
+            <label>Name:
+                <input [(ngModel)]="doc.name" placeholder="Enter your doc's name here"/> 
+            </label>
+        </div>
+    
+    </div>

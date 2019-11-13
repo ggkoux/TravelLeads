@@ -1,0 +1,9 @@
+<h2>MY TRAVEL DOCUMENTS</h2>
+
+<ul class="docs">
+    <li *ngFor="let doc of docs" [class.selected]="hero === selectedHero" (click)="onSelect(doc)">
+        <span class="badge">{{ doc.id }}</span> <span class="text">{{ doc.name }}</span>
+    </li>
+</ul>
+
+<app-doc-detail [doc]="selectedDoc"></app-doc-detail>

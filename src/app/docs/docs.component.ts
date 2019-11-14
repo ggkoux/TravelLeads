@@ -12,13 +12,9 @@ export class DocsComponent implements OnInit {
 
   docs: Doc[];
 
-  selectedDoc: Doc;
 
   constructor(private docService: DocService) { }
 
-  onSelect(doc: Doc): void {
-    this.selectedDoc = doc;
-  }
 
   getDocs(): void {
     this.docService.getDocs().subscribe(docs => this.docs = docs);

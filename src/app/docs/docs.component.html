@@ -1,9 +1,8 @@
-<h2>MY TRAVEL DOCUMENTS</h2>
-
 <ul class="docs">
-    <li *ngFor="let doc of docs" [class.selected]="hero === selectedHero" (click)="onSelect(doc)">
-        <span class="badge">{{ doc.id }}</span> <span class="text">{{ doc.name }}</span>
+    <li *ngFor="let doc of docs">
+      <a routerLink="/detail/{{doc.id}}">
+        <span class="badge">{{ doc.id }}</span>
+        <span class="text">{{ doc.name }}</span>
+      </a>
     </li>
 </ul>
-
-<app-doc-detail [doc]="selectedDoc"></app-doc-detail>

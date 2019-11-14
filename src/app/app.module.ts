@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DocsComponent } from './docs/docs.component';
 import { DocDetailComponent } from './doc-detail/doc-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     DocsComponent,
     DocDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

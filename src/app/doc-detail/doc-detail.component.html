@@ -4,8 +4,9 @@
         <div><span>id: </span>{{doc.id}}</div>
         <div>
             <label>Name:
-                <input [(ngModel)]="doc.name" placeholder="Enter your doc's name here"/> 
+                <input [(ngModel)]="doc.name" placeholder="Enter your doc's name here"/>
             </label>
         </div>
-    
+    <button (click)="save()">save</button>
+    <button (click)="goBack()">go back</button>
     </div>

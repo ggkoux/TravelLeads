@@ -1,8 +1,21 @@
+<h2>My Documents</h2>
+
+<div>
+  <label>Doc name:
+    <input #docName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(docName.value); docName.value=''">
+    add
+  </button>
+</div>
+
 <ul class="docs">
-    <li *ngFor="let doc of docs">
-      <a routerLink="/detail/{{doc.id}}">
-        <span class="badge">{{ doc.id }}</span>
-        <span class="text">{{ doc.name }}</span>
-      </a>
-    </li>
+  <li *ngFor="let doc of docs">
+    <a routerLink="/detail/{{doc.id}}">
+      <span class="badge">{{doc.id}}</span> {{doc.name}}
+    </a>
+    <button class="delete" title="delete doc"
+      (click)="delete(doc)">x</button>
+  </li>
 </ul>

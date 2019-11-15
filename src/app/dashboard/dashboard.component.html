@@ -1,6 +1,11 @@
-<a *ngFor="let doc of docs" class="col-1-4"
-    routerLink="/detail/{{doc.id}}">
+<h3>Most Viewed Documents</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let doc of docs" class="col-1-4"
+      routerLink="/detail/{{doc.id}}">
     <div class="module doc">
       <h4>{{doc.name}}</h4>
     </div>
-</a>
+  </a>
+</div>
+
+<app-doc-search></app-doc-search>
